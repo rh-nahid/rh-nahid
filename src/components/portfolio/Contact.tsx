@@ -25,13 +25,13 @@ export function Contact() {
           />
 
           <div className="relative">
-            <div className="text-[10px] uppercase tracking-[0.5em] text-gold-deep mb-6">Let's Build</div>
+            <div className="text-[10px] uppercase tracking-[0.5em] text-gold-deep mb-6">Let's Connect</div>
             <h2 className="text-5xl md:text-8xl font-light leading-[1.02]">
-              Have a project <br className="hidden md:block" />
-              <span className="italic gradient-gold-text">in mind?</span>
+              Looking for a <br className="hidden md:block" />
+              <span className="italic gradient-gold-text">dedicated SQA?</span>
             </h2>
             <p className="mt-8 max-w-xl mx-auto text-muted-foreground leading-relaxed">
-              I'm currently open to SQA internship roles and freelance development.
+              I'm currently open to SQA internship roles and freelance testing opportunities.
               Reach out — I respond to every message personally.
             </p>
             <a
