@@ -30,41 +30,45 @@
   --color-ring: var(--ring);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
 }
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.99 0.005 80);
-  --foreground: oklch(0.15 0.02 60);
-  --card: oklch(0.97 0.008 80);
-  --card-foreground: oklch(0.15 0.02 60);
+  --background: oklch(0.985 0.006 85);
+  --foreground: oklch(0.14 0.02 60);
+  --card: oklch(0.975 0.008 82);
+  --card-foreground: oklch(0.14 0.02 60);
   --popover: oklch(0.97 0.008 80);
   --popover-foreground: oklch(0.15 0.02 60);
-  --primary: oklch(0.82 0.13 85);
-  --primary-foreground: oklch(0.15 0.02 60);
-  --secondary: oklch(0.93 0.012 80);
+  --primary: oklch(0.74 0.14 80);
+  --primary-foreground: oklch(0.14 0.02 60);
+  --secondary: oklch(0.94 0.012 80);
   --secondary-foreground: oklch(0.25 0.02 60);
   --muted: oklch(0.94 0.01 80);
-  --muted-foreground: oklch(0.5 0.02 80);
-  --accent: oklch(0.82 0.13 85);
-  --accent-foreground: oklch(0.15 0.02 60);
+  --muted-foreground: oklch(0.48 0.02 75);
+  --accent: oklch(0.74 0.14 80);
+  --accent-foreground: oklch(0.14 0.02 60);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.99 0.005 80);
-  --border: oklch(0.82 0.02 70 / 40%);
+  --border: oklch(0.78 0.04 75 / 35%);
   --input: oklch(0.82 0.02 70);
-  --ring: oklch(0.82 0.13 85);
-  --gold: oklch(0.76 0.14 82);
+  --ring: oklch(0.74 0.14 80);
+  --gold: oklch(0.72 0.15 78);
   --gold-soft: oklch(0.88 0.09 88);
+  --gold-deep: oklch(0.55 0.12 65);
 
   --font-display: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Inter", system-ui, sans-serif;
 
-  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.09 88), oklch(0.72 0.16 78));
-  --gradient-radial: radial-gradient(ellipse at top, oklch(0.82 0.13 85 / 0.08), transparent 60%);
-  --shadow-gold: 0 20px 60px -20px oklch(0.76 0.14 82 / 0.25);
-  --shadow-luxe: 0 30px 80px -30px oklch(0 0 0 / 0.08);
+  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.09 88), oklch(0.68 0.16 72) 50%, oklch(0.55 0.12 65));
+  --gradient-gold-soft: linear-gradient(135deg, oklch(0.95 0.05 88), oklch(0.82 0.13 80));
+  --gradient-radial: radial-gradient(ellipse at top, oklch(0.82 0.13 85 / 0.12), transparent 60%);
+  --shadow-gold: 0 25px 70px -25px oklch(0.72 0.15 78 / 0.45);
+  --shadow-luxe: 0 30px 80px -30px oklch(0 0 0 / 0.12);
+  --shadow-soft: 0 10px 40px -15px oklch(0 0 0 / 0.08);
 }
 
 @layer base {
@@ -80,52 +84,87 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.82 0.13 85 / 0.06), transparent),
-      radial-gradient(ellipse 60% 50% at 80% 50%, oklch(0.82 0.13 85 / 0.03), transparent);
+      radial-gradient(ellipse 80% 50% at 50% -10%, oklch(0.82 0.13 85 / 0.10), transparent),
+      radial-gradient(ellipse 60% 50% at 90% 40%, oklch(0.82 0.13 85 / 0.05), transparent),
+      radial-gradient(ellipse 50% 40% at 10% 80%, oklch(0.82 0.13 85 / 0.04), transparent);
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
+  }
+  ::selection {
+    background: var(--gold);
+    color: var(--foreground);
   }
 }
 
 @layer utilities {
-  .text-gold {
-    color: var(--gold);
-  }
-  .bg-gold {
-    background-color: var(--gold);
-  }
+  .text-gold { color: var(--gold); }
+  .text-gold-deep { color: var(--gold-deep); }
+  .bg-gold { background-color: var(--gold); }
+  .bg-gradient-gold { background: var(--gradient-gold); }
   .gradient-gold-text {
     background: var(--gradient-gold);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
-  .border-gold {
-    border-color: var(--gold);
-  }
-  .shadow-gold {
-    box-shadow: var(--shadow-gold);
-  }
-  .shadow-luxe {
-    box-shadow: var(--shadow-luxe);
-  }
+  .border-gold { border-color: var(--gold); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .shadow-luxe { box-shadow: var(--shadow-luxe); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
   .glass {
-    background: oklch(0.99 0.005 80 / 0.65);
-    backdrop-filter: blur(20px);
-    border: 1px solid oklch(0.82 0.13 85 / 0.2);
+    background: oklch(1 0 0 / 0.55);
+    backdrop-filter: blur(24px) saturate(140%);
+    border: 1px solid oklch(0.78 0.06 80 / 0.35);
   }
-  .noise {
-    position: relative;
+  .glass-strong {
+    background: oklch(1 0 0 / 0.78);
+    backdrop-filter: blur(28px) saturate(160%);
+    border: 1px solid oklch(0.78 0.06 80 / 0.4);
   }
+  .noise { position: relative; }
   .noise::after {
     content: "";
     position: absolute;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='0.9' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
-    opacity: 0.03;
+    opacity: 0.04;
     pointer-events: none;
-    mix-blend-mode: overlay;
+    mix-blend-mode: multiply;
+  }
+  .grain-fine::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(oklch(0.78 0.06 80 / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(0.78 0.06 80 / 0.08) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black, transparent 70%);
+    pointer-events: none;
+  }
+  .marquee {
+    animation: marquee 40s linear infinite;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .shine {
+    position: relative;
+    overflow: hidden;
+  }
+  .shine::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, oklch(1 0 0 / 0.5) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.9s ease;
+  }
+  .shine:hover::before { transform: translateX(100%); }
+  .ring-gold {
+    box-shadow: 0 0 0 1px oklch(0.72 0.15 78 / 0.35), inset 0 0 0 1px oklch(1 0 0 / 0.6);
   }
 }
