@@ -8,12 +8,12 @@ export function Hero() {
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-        className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full border border-gold/10"
+        className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full border border-gold/20"
       />
       <motion.div
         animate={{ rotate: -360 }}
         transition={{ duration: 80, repeat: Infinity, ease: "linear" }}
-        className="absolute -bottom-60 -left-40 w-[700px] h-[700px] rounded-full border border-gold/5"
+        className="absolute -bottom-60 -left-40 w-[700px] h-[700px] rounded-full border border-gold/10"
       />
 
       <div className="relative mx-auto max-w-7xl w-full grid lg:grid-cols-12 gap-12 items-center">
@@ -83,10 +83,10 @@ export function Hero() {
           className="lg:col-span-4 relative"
         >
           <div className="relative aspect-[3/4] rounded-2xl glass shadow-luxe overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-gold/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/15 via-transparent to-gold/5" />
             <div className="absolute inset-0 flex flex-col justify-end p-8">
               <div className="text-xs uppercase tracking-[0.3em] text-gold mb-2">Available For</div>
-              <div className="font-display text-3xl">SQA Intern Roles</div>
+              <div className="font-display text-3xl text-foreground">SQA Intern Roles</div>
               <div className="text-muted-foreground text-sm mt-1">& Full-Stack Projects</div>
             </div>
             <motion.div
