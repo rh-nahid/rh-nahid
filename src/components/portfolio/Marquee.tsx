@@ -1,7 +1,6 @@
 const words = [
   "Quality Assurance",
   "Manual Testing",
-  "Laravel",
   "PHP",
   "MySQL",
   "Bug Hunting",

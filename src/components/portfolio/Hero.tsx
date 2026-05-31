@@ -71,7 +71,7 @@ export function Hero() {
           >
             Crafting software quality through meticulous testing and full-stack
             development. Passionate about delivering flawless digital experiences
-            with <span className="text-foreground font-medium">PHP, Laravel, MySQL</span>, and JavaScript.
+            with <span className="text-foreground font-medium">test case design, defect tracking, and quality analysis</span>.
           </motion.p>
 
           <motion.div

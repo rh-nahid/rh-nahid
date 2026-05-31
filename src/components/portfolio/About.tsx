@@ -17,7 +17,7 @@ export function About() {
             I hold a Diploma in Computer Technology and am currently pursuing a
             BSc in Computer Science and Engineering. My passion lies in software
             quality and testing, complemented by hands-on experience in web
-            application development with <span className="text-foreground">PHP, Laravel, MySQL, and JavaScript</span>.
+            application development with <span className="text-foreground">PHP, MySQL, and JavaScript</span>.
           </p>
           <p>
             I am dedicated to leveraging my analytical skills and attention to

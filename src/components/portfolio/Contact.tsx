@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Mail, Linkedin, Phone, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, Phone, ArrowUpRight, Download } from "lucide-react";
 
 export function Contact() {
   return (
@@ -44,6 +44,17 @@ export function Contact() {
                 <ArrowUpRight className="w-4 h-4 group-hover:rotate-45 transition-transform" />
               </span>
             </a>
+
+            <div className="mt-6">
+              <a
+                href="/cv/Rakibul_Hasan_Nahid_CV.pdf"
+                download
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gold/40 text-foreground hover:bg-gold/10 transition-all"
+              >
+                <Download className="w-4 h-4" />
+                Download CV
+              </a>
+            </div>
 
             <div className="mt-14 flex flex-wrap justify-center gap-8 text-sm text-muted-foreground">
               <a href="#" className="flex items-center gap-2 hover:text-gold-deep transition-colors"><Linkedin className="w-4 h-4" /> LinkedIn</a>
