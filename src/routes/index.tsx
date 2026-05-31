@@ -13,9 +13,16 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Rakibul Hasan Nahid — Aspiring SQA Engineer" },
-      { name: "description", content: "Portfolio of Rakibul Hasan Nahid — SQA engineer & full-stack developer crafting reliable software with PHP, SQL and meticulous testing." },
+      {
+        name: "description",
+        content:
+          "Portfolio of Rakibul Hasan Nahid — SQA engineer & full-stack developer crafting reliable software with PHP, SQL and meticulous testing.",
+      },
       { property: "og:title", content: "Rakibul Hasan Nahid — Aspiring SQA Engineer" },
-      { property: "og:description", content: "SQA engineer & full-stack developer based in Dhaka, Bangladesh." },
+      {
+        property: "og:description",
+        content: "SQA engineer & full-stack developer based in Dhaka, Bangladesh.",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },

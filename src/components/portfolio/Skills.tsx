@@ -2,7 +2,11 @@ import { motion } from "motion/react";
 import { Section } from "./Section";
 
 const groups = [
-  { k: "Testing & QA", level: 85, v: ["Manual Testing", "Regression", "Bug Reporting", "Test Case Design"] },
+  {
+    k: "Testing & QA",
+    level: 85,
+    v: ["Manual Testing", "Regression", "Bug Reporting", "Test Case Design"],
+  },
   { k: "API & Tools", level: 75, v: ["Git", "VS Code", "Postman"] },
   { k: "Languages", level: 80, v: ["PHP", "JavaScript", "HTML", "CSS"] },
   { k: "Databases", level: 78, v: ["MySQL", "MSSQL", "PostgreSQL"] },
@@ -10,8 +14,16 @@ const groups = [
 ];
 
 const education = [
-  { d: "BSc in Computer Science and Engineering", s: "Canadian University of Bangladesh", p: "01/2024 — Present" },
-  { d: "Diploma in Computer Technology", s: "National Polytechnic Institute", p: "01/2019 — 12/2023" },
+  {
+    d: "BSc in Computer Science and Engineering",
+    s: "Canadian University of Bangladesh",
+    p: "01/2024 — Present",
+  },
+  {
+    d: "Diploma in Computer Technology",
+    s: "National Polytechnic Institute",
+    p: "01/2019 — 12/2023",
+  },
 ];
 
 const certs = [
@@ -48,7 +60,10 @@ export function Skills() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {g.v.map((s) => (
-                  <span key={s} className="text-xs px-3 py-1 rounded-full bg-secondary/70 text-foreground/80 border border-border/60">
+                  <span
+                    key={s}
+                    className="text-xs px-3 py-1 rounded-full bg-secondary/70 text-foreground/80 border border-border/60"
+                  >
                     {s}
                   </span>
                 ))}
@@ -59,7 +74,9 @@ export function Skills() {
 
         <div className="space-y-8">
           <div>
-            <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-4">Education</div>
+            <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-4">
+              Education
+            </div>
             <div className="space-y-4">
               {education.map((e, i) => (
                 <motion.div
@@ -73,13 +90,17 @@ export function Skills() {
                   <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-gold" />
                   <div className="font-display text-xl">{e.d}</div>
                   <div className="text-gold-deep text-sm mt-1">{e.s}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{e.p} · Dhaka, Bangladesh</div>
+                  <div className="text-xs text-muted-foreground mt-1">
+                    {e.p} · Dhaka, Bangladesh
+                  </div>
                 </motion.div>
               ))}
             </div>
           </div>
           <div>
-            <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-4">Certifications</div>
+            <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-4">
+              Certifications
+            </div>
             <ul className="space-y-3">
               {certs.map((c, i) => (
                 <motion.li
@@ -90,13 +111,16 @@ export function Skills() {
                   transition={{ delay: i * 0.1 }}
                   className="glass-strong rounded-2xl p-5 text-sm flex gap-3 items-start"
                 >
-                  <span className="text-gold mt-0.5">✦</span>{c}
+                  <span className="text-gold mt-0.5">✦</span>
+                  {c}
                 </motion.li>
               ))}
             </ul>
           </div>
           <div>
-            <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-4">Languages</div>
+            <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-4">
+              Languages
+            </div>
             <div className="grid grid-cols-2 gap-4">
               <div className="glass-strong rounded-2xl p-5">
                 <div className="font-display text-lg">English</div>

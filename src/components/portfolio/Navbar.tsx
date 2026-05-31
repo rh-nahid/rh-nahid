@@ -19,7 +19,9 @@ export function Navbar() {
     >
       <div className="mx-auto max-w-7xl flex items-center justify-between glass-strong rounded-full pl-6 pr-3 py-2.5 shadow-soft">
         <a href="#" className="font-display text-xl tracking-tight flex items-center gap-2">
-          <span className="w-7 h-7 rounded-full bg-gradient-gold flex items-center justify-center text-primary-foreground italic font-display text-sm">N</span>
+          <span className="w-7 h-7 rounded-full bg-gradient-gold flex items-center justify-center text-primary-foreground italic font-display text-sm">
+            N
+          </span>
           <span className="gradient-gold-text font-medium">RHN</span>
           <span className="text-muted-foreground">.</span>
         </a>

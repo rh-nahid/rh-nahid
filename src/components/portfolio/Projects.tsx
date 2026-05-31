@@ -50,7 +50,9 @@ export function Projects() {
                 <div className="font-display italic text-6xl gradient-gold-text">{p.no}</div>
               </div>
               <div className="md:col-span-7">
-                <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-3">{p.period}</div>
+                <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-3">
+                  {p.period}
+                </div>
                 <h3 className="font-display text-4xl md:text-5xl mb-4 leading-tight group-hover:gradient-gold-text transition-all">
                   {p.title}
                 </h3>
@@ -93,7 +95,10 @@ export function Projects() {
 
                 <div className="flex flex-wrap gap-2 justify-end">
                   {p.tags.map((t) => (
-                    <span key={t} className="text-xs px-3 py-1 rounded-full border border-gold/30 text-gold-deep bg-white/40 backdrop-blur-sm">
+                    <span
+                      key={t}
+                      className="text-xs px-3 py-1 rounded-full border border-gold/30 text-gold-deep bg-white/40 backdrop-blur-sm"
+                    >
                       {t}
                     </span>
                   ))}
