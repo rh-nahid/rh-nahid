@@ -33,12 +33,12 @@ export function Section({
           <div className="md:col-span-4">
             <div className="flex items-center gap-3">
               <span className="h-px w-8 bg-gold/60" />
-              <span className="text-xs uppercase tracking-[0.4em] text-gold-deep font-medium">{eyebrow}</span>
+              <span className="text-xs uppercase tracking-[0.4em] text-gold-deep font-medium">
+                {eyebrow}
+              </span>
             </div>
           </div>
-          <h2 className="md:col-span-8 text-5xl md:text-7xl font-light leading-[1.02]">
-            {title}
-          </h2>
+          <h2 className="md:col-span-8 text-5xl md:text-7xl font-light leading-[1.02]">{title}</h2>
         </motion.div>
         {children}
       </div>

@@ -7,6 +7,7 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/react";
 
 import appCss from "../styles.css?url";
 
@@ -73,17 +74,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Nahid CV" },
-      { name: "description", content: "Luxe Portfolio: A modern, elegant UI for showcasing luxury portfolios with smooth animations." },
+      {
+        name: "description",
+        content:
+          "Luxe Portfolio: A modern, elegant UI for showcasing luxury portfolios with smooth animations.",
+      },
       { name: "author", content: "Lovable" },
       { property: "og:title", content: "Nahid CV" },
-      { property: "og:description", content: "Luxe Portfolio: A modern, elegant UI for showcasing luxury portfolios with smooth animations." },
+      {
+        property: "og:description",
+        content:
+          "Luxe Portfolio: A modern, elegant UI for showcasing luxury portfolios with smooth animations.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Nahid CV" },
-      { name: "twitter:description", content: "Luxe Portfolio: A modern, elegant UI for showcasing luxury portfolios with smooth animations." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a656c8-9721-49b6-b499-c7a7a8b806aa/id-preview-0db5aea7--d6eda7f5-4805-41d0-a281-4d9604091890.lovable.app-1780000990702.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a656c8-9721-49b6-b499-c7a7a8b806aa/id-preview-0db5aea7--d6eda7f5-4805-41d0-a281-4d9604091890.lovable.app-1780000990702.png" },
+      {
+        name: "twitter:description",
+        content:
+          "Luxe Portfolio: A modern, elegant UI for showcasing luxury portfolios with smooth animations.",
+      },
+      {
+        property: "og:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a656c8-9721-49b6-b499-c7a7a8b806aa/id-preview-0db5aea7--d6eda7f5-4805-41d0-a281-4d9604091890.lovable.app-1780000990702.png",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/06a656c8-9721-49b6-b499-c7a7a8b806aa/id-preview-0db5aea7--d6eda7f5-4805-41d0-a281-4d9604091890.lovable.app-1780000990702.png",
+      },
     ],
     links: [
       {
@@ -106,6 +127,7 @@ function RootShell({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <Analytics />
         <Scripts />
       </body>
     </html>

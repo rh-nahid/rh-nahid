@@ -69,9 +69,12 @@ export function Hero() {
             transition={{ delay: 1.1, duration: 0.8 }}
             className="mt-10 max-w-xl text-lg text-muted-foreground leading-relaxed"
           >
-            Crafting software quality through meticulous testing and full-stack
-            development. Passionate about delivering flawless digital experiences
-            with <span className="text-foreground font-medium">test case design, defect tracking, and quality analysis</span>.
+            Crafting software quality through meticulous testing and full-stack development.
+            Passionate about delivering flawless digital experiences with{" "}
+            <span className="text-foreground font-medium">
+              test case design, defect tracking, and quality analysis
+            </span>
+            .
           </motion.p>
 
           <motion.div
@@ -101,9 +104,15 @@ export function Hero() {
             transition={{ delay: 1.4 }}
             className="mt-10 flex flex-wrap gap-6 text-sm text-muted-foreground"
           >
-            <span className="flex items-center gap-2"><MapPin className="w-4 h-4 text-gold" /> Dhaka, Bangladesh</span>
-            <span className="flex items-center gap-2"><Phone className="w-4 h-4 text-gold" /> +880 1818 961859</span>
-            <span className="flex items-center gap-2"><Mail className="w-4 h-4 text-gold" /> rakibulhasannahid7@gmail.com</span>
+            <span className="flex items-center gap-2">
+              <MapPin className="w-4 h-4 text-gold" /> Dhaka, Bangladesh
+            </span>
+            <span className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-gold" /> +880 1818 961859
+            </span>
+            <span className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-gold" /> rakibulhasannahid7@gmail.com
+            </span>
           </motion.div>
         </div>
 
@@ -122,12 +131,18 @@ export function Hero() {
                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
                 className="absolute w-72 h-72 rounded-full border border-dashed border-gold/40"
               />
-              <span className="font-display italic text-[14rem] leading-none gradient-gold-text">N</span>
+              <span className="font-display italic text-[14rem] leading-none gradient-gold-text">
+                N
+              </span>
             </div>
 
             <div className="absolute inset-0 flex flex-col justify-end p-7">
-              <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-2">Available For</div>
-              <div className="font-display text-3xl text-foreground leading-tight">SQA Intern Roles</div>
+              <div className="text-[10px] uppercase tracking-[0.4em] text-gold-deep mb-2">
+                Available For
+              </div>
+              <div className="font-display text-3xl text-foreground leading-tight">
+                SQA Intern Roles
+              </div>
               <div className="text-muted-foreground text-sm mt-1">& Full-Stack Projects</div>
             </div>
 
@@ -153,7 +168,9 @@ export function Hero() {
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold" />
               </span>
               <div>
-                <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">Status</div>
+                <div className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+                  Status
+                </div>
                 <div className="text-sm font-medium">Open to work</div>
               </div>
             </div>
